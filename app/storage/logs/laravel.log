@@ -216,3 +216,64 @@ Stack trace:
 Stack trace:
 #0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
 #1 {main} [] []
+[2014-05-16 05:45:27] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ''name'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in /var/www/html/mejorandoLaravel/app/database/seeds/CategoryTableSeeder.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 05:45:52] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ''name'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in /var/www/html/mejorandoLaravel/app/database/seeds/CategoryTableSeeder.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 05:57:33] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mejorandolaravel`.`candidates`, CONSTRAINT `candidates_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)) (SQL: insert into `candidates` (`updated_at`, `created_at`) values (2014-05-16 05:57:33, 2014-05-16 05:57:33))' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(295): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1722): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#4 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(919): call_user_func_array(Array, Array)
+#6 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(6396): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#7 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(6396): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#8 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(6386): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#9 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(6345): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#10 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(5989): Illuminate\Database\Eloquent\Model->save()
+#11 /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php(16): Illuminate\Database\Eloquent\Model::create(Array)
+#12 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(37): CandidateTableSeeder->run()
+#13 /var/www/html/mejorandoLaravel/app/database/seeds/DatabaseSeeder.php(15): Illuminate\Database\Seeder->call('CandidateTableS...')
+#14 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/SeedCommand.php(52): DatabaseSeeder->run()
+#15 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\SeedCommand->fire()
+#16 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#22 {main} [] []
+[2014-05-16 06:23:19] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ','' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:13
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 06:24:00] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'foreach' (T_FOREACH)' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:16
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 06:26:22] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'foreach' (T_FOREACH)' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:16
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 06:29:16] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'foreach' (T_FOREACH)' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:16
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 06:32:44] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$user' (T_VARIABLE)' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 06:32:58] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$user' (T_VARIABLE)' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 06:34:52] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'hash' not found' in /var/www/html/mejorandoLaravel/app/database/seeds/CandidateTableSeeder.php:21
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
