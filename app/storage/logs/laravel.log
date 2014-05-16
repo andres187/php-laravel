@@ -1,0 +1,218 @@
+[2014-05-16 04:17:47] production.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "generate" namespace.' in /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php:514
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(548): Symfony\Component\Console\Application->findNamespace('generate')
+#1 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(188): Symfony\Component\Console\Application->find('generate:migrat...')
+#2 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2014-05-16 04:39:55] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('create table `m...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(112): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(52): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#6 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#7 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#13 {main} [] []
+[2014-05-16 04:41:07] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'users' (SQL: drop table `users`)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('drop table `use...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('drop table `use...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(127): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(3155): Illuminate\Database\Schema\Builder->drop('users')
+#5 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_042515_create_users_table.php(37): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#6 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_042515_create_users_table.php(37): Illuminate\Support\Facades\Schema::drop('users')
+#7 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(197): CreateUsersTable->down()
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(170): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#9 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(56): Illuminate\Database\Migrations\Migrator->rollback(false)
+#10 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(124): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(31): Illuminate\Console\Command->call('migrate:reset', Array)
+#15 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\RefreshCommand->fire()
+#16 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\RefreshCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#22 {main} [] []
+[2014-05-16 04:42:02] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'users' (SQL: drop table `users`)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('drop table `use...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('drop table `use...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(127): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(3155): Illuminate\Database\Schema\Builder->drop('users')
+#5 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_042515_create_users_table.php(37): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#6 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_042515_create_users_table.php(37): Illuminate\Support\Facades\Schema::drop('users')
+#7 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(197): CreateUsersTable->down()
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(170): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#9 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(56): Illuminate\Database\Migrations\Migrator->rollback(false)
+#10 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#17 {main} [] []
+[2014-05-16 04:42:26] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('create table `m...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(112): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(52): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#6 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#7 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#13 {main} [] []
+[2014-05-16 04:43:12] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'users' (SQL: drop table `users`)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('drop table `use...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('drop table `use...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(127): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(3155): Illuminate\Database\Schema\Builder->drop('users')
+#5 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_042515_create_users_table.php(37): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#6 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_042515_create_users_table.php(37): Illuminate\Support\Facades\Schema::drop('users')
+#7 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(197): CreateUsersTable->down()
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(170): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#9 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(54): Illuminate\Database\Migrations\Migrator->rollback(false)
+#10 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\RollbackCommand->fire()
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\RollbackCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#17 {main} [] []
+[2014-05-16 04:47:20] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'users' (SQL: drop table `users`)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('drop table `use...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('drop table `use...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(127): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(3155): Illuminate\Database\Schema\Builder->drop('users')
+#5 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_044703_delete_users_table.php(15): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#6 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_044703_delete_users_table.php(15): Illuminate\Support\Facades\Schema::drop('users')
+#7 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(133): DeleteUsersTable->up()
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(109): Illuminate\Database\Migrations\Migrator->runUp('2014_05_16_0447...', 2, false)
+#9 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(80): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, false)
+#10 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(65): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', false)
+#11 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#18 {main} [] []
+[2014-05-16 04:47:28] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'users' (SQL: drop table `users`)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('drop table `use...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('drop table `use...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(127): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/bootstrap/compiled.php(3155): Illuminate\Database\Schema\Builder->drop('users')
+#5 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_044703_delete_users_table.php(15): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#6 /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_044703_delete_users_table.php(15): Illuminate\Support\Facades\Schema::drop('users')
+#7 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(133): DeleteUsersTable->up()
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(109): Illuminate\Database\Migrations\Migrator->runUp('2014_05_16_0447...', 2, false)
+#9 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(80): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, false)
+#10 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(65): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', false)
+#11 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#18 {main} [] []
+[2014-05-16 04:49:13] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('create table `m...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(112): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(52): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#6 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#7 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#13 {main} [] []
+[2014-05-16 04:49:21] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class CreateUsersTable' in /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_044746_create_users_table.php:39
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-05-16 04:49:52] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('create table `m...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(112): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(52): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#6 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#7 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#13 {main} [] []
+[2014-05-16 04:50:16] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('create table `m...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(112): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(52): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#6 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#7 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#13 {main} [] []
+[2014-05-16 04:53:02] production.ERROR: exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:555
+Stack trace:
+#0 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#1 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(63): Illuminate\Database\Connection->statement('create table `m...')
+#2 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(169): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#3 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(112): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#4 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#5 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(52): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#6 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#7 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(241): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mejorandoLaravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(895): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/mejorandoLaravel/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mejorandoLaravel/artisan(59): Symfony\Component\Console\Application->run()
+#13 {main} [] []
+[2014-05-16 04:53:20] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class CreateUsersTable' in /var/www/html/mejorandoLaravel/app/database/migrations/2014_05_16_045033_create_users_table.php:32
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
